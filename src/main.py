@@ -49,7 +49,6 @@ def main():
         processed_path=args.output,
         copy_files=args.copy,
         dry_run=args.dry_run,
-        make_report=not args.no_report,
     )
 
     stats = processor.process_all()
