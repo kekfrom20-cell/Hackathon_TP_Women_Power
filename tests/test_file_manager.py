@@ -41,6 +41,11 @@ def test_create_folders_empty_categories(manager):
 
 
 def test_write_log(manager):
+    os.makedirs(
+        os.path.dirname(manager.log_path),
+        exist_ok=True
+    )
+
     manager.write_log("Test message")
 
     with open(manager.log_path, encoding="utf-8") as file:
