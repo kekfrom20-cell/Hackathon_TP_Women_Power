@@ -13,22 +13,17 @@ class MailProcessor:
         processed_path="processed",
         log_path="logs/result.log",
         stats_path="stats.json",
-        report_path="report.html",
         copy_files=False,
         dry_run=False,
-        make_report=True,
     ):
         self.inbox_path = inbox_path
         self.processed_path = processed_path
         self.log_path = log_path
         self.stats_path = stats_path
-        self.report_path = report_path
-        self.make_report = make_report
 
         self.reader = MailReader()
         self.classifier = MailClassifier()
         self.statistics = Statistics()
-        self.report_generator = ReportGenerator()
 
         self.file_manager = FileManager(
             inbox_path=self.inbox_path,
