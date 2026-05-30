@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Logs
+logs/
+
+# Generated files
+stats.json
+
+# Processed emails
+processed/
