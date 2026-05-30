@@ -3,7 +3,6 @@ import os
 from src.classifier import MailClassifier, CATEGORY_KEYWORDS
 from src.file_manager import FileManager
 from src.reader import MailReader
-from src.report import ReportGenerator
 from src.stats import Statistics
 
 
