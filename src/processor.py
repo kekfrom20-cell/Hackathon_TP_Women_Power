@@ -112,11 +112,5 @@ class MailProcessor:
         stats = self.statistics.to_dict()
         self.statistics.save(self.stats_path)
 
-        if self.make_report:
-            self.report_generator.generate(
-                stats=stats,
-                processed_emails=self.processed_emails,
-                output_path=self.report_path,
-            )
 
         return stats
