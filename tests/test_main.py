@@ -67,7 +67,6 @@ def test_main_calls_processor_with_default_arguments(monkeypatch, capsys):
         processed_path="processed",
         copy_files=False,
         dry_run=False,
-        make_report=True,
     )
 
     mock_processor.process_all.assert_called_once()
