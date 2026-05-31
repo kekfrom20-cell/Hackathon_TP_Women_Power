@@ -13,7 +13,6 @@ def test_parse_arguments_default_values(monkeypatch):
     assert args.output == "processed"
     assert args.copy is False
     assert args.dry_run is False
-    assert args.no_report is False
 
 
 def test_parse_arguments_custom_values(monkeypatch):
@@ -28,7 +27,6 @@ def test_parse_arguments_custom_values(monkeypatch):
             "custom_output",
             "--copy",
             "--dry-run",
-            "--no-report",
         ],
     )
 
@@ -38,7 +36,6 @@ def test_parse_arguments_custom_values(monkeypatch):
     assert args.output == "custom_output"
     assert args.copy is True
     assert args.dry_run is True
-    assert args.no_report is True
 
 
 def test_main_calls_processor_with_default_arguments(monkeypatch, capsys):
@@ -67,7 +64,6 @@ def test_main_calls_processor_with_default_arguments(monkeypatch, capsys):
         processed_path="processed",
         copy_files=False,
         dry_run=False,
-        make_report=True,
     )
 
     mock_processor.process_all.assert_called_once()
@@ -103,7 +99,6 @@ def test_main_calls_processor_with_custom_arguments(monkeypatch):
             "test_processed",
             "--copy",
             "--dry-run",
-            "--no-report",
         ],
     )
 
@@ -116,7 +111,6 @@ def test_main_calls_processor_with_custom_arguments(monkeypatch):
         processed_path="test_processed",
         copy_files=True,
         dry_run=True,
-        make_report=False,
     )
 
     mock_processor.process_all.assert_called_once()
