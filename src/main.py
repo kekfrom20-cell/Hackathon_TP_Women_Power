@@ -33,7 +33,9 @@ def parse_arguments():
     )
 
     parser.add_argument(
+        "--no-report",
         action="store_true",
+        help="Do not generate report",
     )
 
     return parser.parse_args()
