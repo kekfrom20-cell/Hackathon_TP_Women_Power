@@ -111,6 +111,5 @@ class MailProcessor:
 
         stats = self.statistics.to_dict()
         self.statistics.save(self.stats_path)
-
-
+        
         return stats
